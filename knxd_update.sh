@@ -43,13 +43,13 @@ export LD_LIBRARY_PATH=$INSTALL_PREFIX/lib:$LD_LIBRARY_PATH
 if [ ! -d "$BUILD_PATH" ]; then mkdir -p "$BUILD_PATH"; fi
 
 cd $BUILD_PATH
-if [ -d "$BUILD_PATH/knxd" ]; thencd knxd
+if [ -d "$BUILD_PATH/knxd" ]; then
 	echo "knxd repository found"
 	cd "$BUILD_PATH/knxd"
 	git pull
 else
 	git clone https://github.com/knxd/knxd knxd
-	cd knxdcd
+	cd knxd
 fi
 
 git checkout master
